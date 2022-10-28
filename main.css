@@ -1,0 +1,147 @@
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  display: flex;
+  margin: 0;
+  height: 100vh;
+  width: 100vw;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 16px;
+  background: url(https://wallpapers.com/images/file/easter-bunny-and-eggs-on-nest-k331s2wc2ljbb3qb.jpg)
+    no-repeat fixed;
+}
+
+body h1 {
+  color: #fff;
+}
+
+#overlay {
+  height: 100vh;
+  width: 100vw;
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  z-index: 1;
+  background: #e1bee7;
+}
+
+#overlay h1 {
+  font-size: 128px;
+  margin: 0;
+}
+
+*,
+*::before {
+  box-sizing: border-box;
+  user-select: none;
+}
+
+#wrapper {
+  display: grid;
+  grid-template-rows: 32px auto;
+  grid-template-columns: 32px auto;
+  gap: 8px;
+}
+
+#head {
+  display: flex;
+  flex: 1 100%;
+  gap: 4px;
+  padding: 0 8px;
+  justify-content: space-around;
+  align-items: center;
+}
+
+#aside {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  padding: 8px 0;
+}
+
+#aside span,
+#head span {
+  display: block;
+  height: 32px;
+  width: 32px;
+  line-height: 29px;
+  border: 1px solid #fff;
+  text-align: center;
+  border-radius: 8px;
+  color: #fff;
+}
+
+#grid {
+  width: 174px;
+  background-color: #333;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px;
+  padding: 8px;
+  border-radius: 8px;
+}
+
+#grid div {
+  height: 50px;
+  width: 50px;
+  border-radius: 8px;
+  background-color: #fafafa;
+  text-align: center;
+  line-height: 50px;
+  position: relative;
+}
+
+.closed::before {
+  content: "";
+  height: 50px;
+  width: 50px;
+  position: absolute;
+  left: 0;
+  background: #a1a1a1;
+  top: 0;
+  border-radius: 8px;
+}
+
+#toast {
+  visibility: hidden;
+  background: #fff;
+  padding: 8px;
+  border-radius: 8px;
+}
+
+button {
+  background: #4caf50;
+  border-radius: 3px;
+  border: 0;
+  padding: 8px 16px;
+  color: #fff;
+  font-weight: 500;
+  font-family: inherit;
+  cursor: pointer;
+  transition: background 0.3s linear;
+}
+
+button:hover {
+  background: #388e3c;
+}
+
+#guessInput {
+  padding: 8px;
+  border-radius: 3px;
+  border: 0;
+  background: #eee;
+  color: #333;
+  font: inherit;
+}
+
+#guessInput:not(:placeholder-shown) {
+  text-transform: uppercase;
+}
+
+footer {
+  display: flex;
+  gap: 16px;
+}

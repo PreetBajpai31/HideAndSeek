@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./main.css" />
+    <title>Hide & Seek</title>
+  </head>
+
+  <body>
+    <div id="overlay">
+      <h1>Welcome!</h1>
+      <button id="play">▶ Play Game!</button>
+    </div>
+    <h1>HIDE AND SEEK GAME</h1>
+    <div id="wrapper">
+      <div></div>
+      <div id="head"></div>
+      <div id="aside"></div>
+      <div id="grid"></div>
+    </div>
+    <p id="toast">ERR!</p>
+    <footer>
+      <input
+        type="text"
+        id="guessInput"
+        placeholder="Enter your guess! e.g. A2"
+        maxlength="2"
+      />
+      <button id="guess">Guess</button>
+      <button id="retry">Restart Game!</button>
+    </footer>
+    <script src="./main.js"></script>
+  </body>
+</html>
